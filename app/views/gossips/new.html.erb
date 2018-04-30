@@ -1,0 +1,6 @@
+<h1>Qui a dit quoi ?!</h1>
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+	Auteur (anonyme): <%= text_field_tag 'author', @author %><br>	
+	Rumeur: <%= text_field_tag 'content', @content %><br>
+	<%= submit_tag 'Add a gossip' %>
+<% end %>
