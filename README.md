@@ -21,7 +21,7 @@ Vous pouvez observer les pages dans 'localhost:3000'
 On y utilise les méthodes suivantes :
 
 * Associations : Belongs_to - Has_many
-* Resources :gossip, :comment
+* Resources : gossip, :comment
 * Controllers : create, show, update, destroy ...
 * Bootstrap pour le CSS
 
