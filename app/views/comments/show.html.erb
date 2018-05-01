@@ -1,11 +1,15 @@
-<h1>Pour editer le commentaire :</h1>
-<p>Le contenu : <%= @my_comment.body %></p>
-<p>L'auteur : <%= @my_comment.anonymous_commentator %></p>
-<br>
-<%= form_for @my_comment, url: {action: "update"} do |comment_form| %>
-  Changer le contenu ? <%= comment_form.text_field :body %><br>
-  Changer l'auteur ? <%= comment_form.text_field :anonymous_commentator %><br>
-  <%= comment_form.submit "Mise a jour" %>
-<% end %> 
-<br>
-<p>Pour supprimer le commentaire : <%= link_to 'Pour supprimer', @comment, method: :delete %></p> 
+<div class="contenu_marge">
+	<div class="text-center">
+		<h1>Pour editer le commentaire :</h1>
+		<p>Le contenu : <%= @my_comment.body %></p>
+		<p>L'auteur : <%= @my_comment.anonymous_commentator %></p>
+		<br>
+		<%= form_for @my_comment, url: {action: "update"} do |comment_form| %>
+		  Changer le contenu ? <%= comment_form.text_field :body %><br>
+		  Changer l'auteur ? <%= comment_form.text_field :anonymous_commentator %><br>
+		  <%= comment_form.submit "Mise a jour" %>
+		<% end %> 
+		<br>
+		<p>Pour supprimer le commentaire : <%= link_to 'Pour supprimer', @comment, method: :delete %></p> 
+	</div>
+</div>

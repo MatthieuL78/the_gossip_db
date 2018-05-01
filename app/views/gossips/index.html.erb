@@ -1,20 +1,23 @@
-<h1>Index des gossips</h1>
-<p>La liste des ragots :</p>
-<table>
-	<tr>
-		<th>Auteur</th>
-		<th>Ragots</th>
-		<th>Liens</th>
-		<th>Nombre de commentaire</th>
-	</tr>
+<div class="contenu_marge">
+	<div class="text-center">
+		<h1>Index des gossips</h1>
+		<p>La liste des ragots :</p>
+		<table class="text-center, table">
+			<tr>
+				<th class="text-center">Auteur</th>
+				<th class="text-center">Ragots</th>
+				<th class="text-center">Liens</th>
+				<th class="text-center">Nombre de commentaire</th>
+			</tr>
 
-	<% @gossip_array.each do |gossip| %>
-	<tr>
-		<td><%= gossip[0] %></td>
-		<td><%= gossip[1] %></td>
-		<td><%= link_to 'Lien', gossip_path(gossip[2]) %></td>
-		<td><%= gossip[3] %></td>
-	</tr>
-	<% end %>
-</table>
-
+			<% @gossip_array.each do |gossip| %>
+			<tr>
+				<td><%= gossip[0] %></td>
+				<td><%= gossip[1] %></td>
+				<td><%= link_to 'Lien', gossip_path(gossip[2]) %></td>
+				<td><%= gossip[3] %></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+</div>

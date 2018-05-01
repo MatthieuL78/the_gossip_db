@@ -1,9 +1,13 @@
-<h1>Pour editer le gossip :</h1>
-<p>Le contenu : <%= @my_gossip.content %> </p>
-<p>L'auteur : <%= @my_gossip.anonymous_author %></p>
-<br>
-<%= form_for @my_gossip, url: {action: "update"} do |gossip_form| %>
-  Changer le contenu ? <%= gossip_form.text_field :content %><br>
-  Changer l'auteur ? <%= gossip_form.text_field :anonymous_author %><br>
-  <%= gossip_form.submit "Mise a jour" %>
-<% end %> 
+<div class="contenu_marge">
+	<div class="text-center">
+		<h1>Pour editer le gossip :</h1>
+		<p>Le contenu : <%= @my_gossip.content %> </p>
+		<p>L'auteur : <%= @my_gossip.anonymous_author %></p>
+		<br>
+		<%= form_for @my_gossip, url: {action: "update"} do |gossip_form| %>
+		  Changer le contenu ? <%= gossip_form.text_field :content %><br>
+		  Changer l'auteur ? <%= gossip_form.text_field :anonymous_author %><br>
+		  <%= gossip_form.submit "Mise a jour" %>
+		<% end %> 
+	</div>
+</div>

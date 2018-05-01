@@ -1,29 +1,31 @@
-<h1>La rumeur ...</h1>
-<%= @my_gossip.content %>
+<div class="contenu_marge">
+	<div class="text-center">
+		<h1>La rumeur ...</h1>
+		<p><%= @my_gossip.content %> <%= link_to 'Editer', edit_gossip_path %> <%= link_to 'Supprimer', @gossip, method: :delete %></p>
+		<p>Ajouter un commentaire :</p>
+		<%= form_tag(:controller => 'comments', :action => 'create', :method => "post") do %>
+			Auteur (anonyme): <%= text_field_tag 'author', @author %><br>
+			Commentaire: <%= text_field_tag 'comment', @comment %><br>
+			<%= hidden_field_tag(:id, @my_gossip.id) %>
+			<%= submit_tag 'Add a comment' %><br>
+		<% end %>
+		<br>
+	</div>
+	<div class="contenu_comment">
+		<h2>Les commentaires :</h2>
+		<table class="table">
+			<tr>
+				<th>Auteurs</th>
+				<th>Commentaires</th>
+			</tr>
 
-<p>Pour editer le gossip : <%= link_to 'Editer', edit_gossip_path %>
-<p>Pour supprimer le gossip : <%= link_to 'Pour supprimer', @gossip, method: :delete %></p> 
-
-<p>Les commentaires :</p>
-<p>Ajouter un commentaire :</p>
-<%= form_tag(:controller => 'comments', :action => 'create', :method => "post") do %>
-	Auteur (anonyme): <%= text_field_tag 'author', @author %><br>
-	Commentaire: <%= text_field_tag 'comment', @comment %><br>
-	<%= hidden_field_tag(:id, @my_gossip.id) %>
-	<%= submit_tag 'Add a comment' %><br>
-<% end %>
-<br>
-<table>
-	<tr>
-		<th>Auteur</th>
-		<th>Commentaire</th>
-	</tr>
-
-	<% @my_gossip.comments.each do |comment| %>
-	<tr>
-		<th><%= comment.anonymous_commentator %></th>
-		<th><%= comment.body %></th>
-		<th><%= link_to 'Modifier le commentaire', comment_path(comment.id) %></th>
-	</tr>
-	<% end %>
-</table>
+			<% @my_gossip.comments.each do |comment| %>
+			<tr>
+				<th><%= comment.anonymous_commentator %></th>
+				<th><%= comment.body %></th>
+				<th><%= link_to 'Modifier le commentaire', comment_path(comment.id) %></th>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
