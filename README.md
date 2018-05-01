@@ -1,24 +1,30 @@
-# README
+# Database Movie 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ce projet est un CRUD comprenant 2 models : Gossip et Comment. On peut y ajouter/lire/modifier/détruire des gossips et des commentaires associés aux gossips.
 
-Things you may want to cover:
+## Lancer le projet
+Pour lancer le projet, sur le terminal (dans le dossier concerne) :
+```
+bundle install --without production
+```
 
-* Ruby version
+```
+rails db:migrate
+```
 
-* System dependencies
+```
+rails s
+```
 
-* Configuration
+Vous pouvez observer les pages dans 'localhost:3000'
 
-* Database creation
+On y utilise les méthodes suivantes :
 
-* Database initialization
+* Associations : Belongs_to - Has_many
+* Resources :gossip, :comment
+* Controllers : create, show, update, destroy ...
+* Bootstrap pour le CSS
 
-* How to run the test suite
+Vous pouvez voir le projet sur heroku : 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* https://young-brook-32682.herokuapp.com/
