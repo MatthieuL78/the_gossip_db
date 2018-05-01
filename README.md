@@ -30,4 +30,4 @@ Vous pouvez voir le projet sur heroku :
 * https://young-brook-32682.herokuapp.com/
 
 ## CSS
-Le CSS a était mit dans le assets/stylesheets/application.css
+Le CSS est dans le assets/stylesheets/application.css
