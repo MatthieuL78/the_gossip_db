@@ -1,4 +1,4 @@
-# Database Movie 
+# CRUD Gossip 
 
 Ce projet est un CRUD comprenant 2 models : Gossip et Comment. On peut y ajouter/lire/modifier/détruire des gossips et des commentaires associés aux gossips.
 
@@ -28,3 +28,6 @@ On y utilise les méthodes suivantes :
 Vous pouvez voir le projet sur heroku : 
 
 * https://young-brook-32682.herokuapp.com/
+
+## CSS
+Le CSS a était mit dans le assets/stylesheets/application.css
